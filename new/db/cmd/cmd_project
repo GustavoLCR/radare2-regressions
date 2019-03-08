@@ -385,3 +385,14 @@ EXPECT=<<RUN
 3
 5
 RUN
+
+NAME='File contain spaces'
+FILE='../bins/other/projects/hello world'
+CMDS=<<EXPECT
+e dir.projects = .tmp/
+Ps spaces > /dev/null
+Po spaces
+p8 8
+EXPECT=<<RUN
+31ed4989d15e4889
+RUN
